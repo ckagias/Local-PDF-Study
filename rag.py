@@ -1,4 +1,4 @@
-# RAG Study System
+# Local PDF Study Companion
 # Uses LangChain + Ollama + ChromaDB to answer questions from your PDF files.
 #
 # Install dependencies:
@@ -194,13 +194,13 @@ def save_study_guide_as_pdf(text: str, lang: str = "en") -> str:
     # Localised header labels
     title_text    = "Οδηγός Μελέτης" if lang == "el" else "Study Guide"
     generated_lbl = "Δημιουργήθηκε"  if lang == "el" else "Generated on"
-    system_lbl    = "Σύστημα RAG"    if lang == "el" else "RAG Study System"
+    system_lbl    = "Σύστημα Μελέτης PDF" if lang == "el" else "Local PDF Study"
 
     doc = SimpleDocTemplate(
         output_path, pagesize=A4,
         leftMargin=2.5*cm, rightMargin=2.5*cm,
         topMargin=2.5*cm, bottomMargin=2.5*cm,
-        title=title_text, author="RAG Study System",
+        title=title_text, author="Local PDF Study",
     )
 
     styles = _build_pdf_styles(getSampleStyleSheet())
@@ -229,13 +229,13 @@ def save_quiz_as_pdf(text: str, lang: str = "en") -> str:
     # Localised header labels
     title_text    = "Κουίζ Εξέτασης" if lang == "el" else "Quiz"
     generated_lbl = "Δημιουργήθηκε"  if lang == "el" else "Generated on"
-    system_lbl    = "Σύστημα RAG"    if lang == "el" else "RAG Study System"
+    system_lbl    = "Σύστημα Μελέτης PDF" if lang == "el" else "Local PDF Study"
 
     doc = SimpleDocTemplate(
         output_path, pagesize=A4,
         leftMargin=2.5*cm, rightMargin=2.5*cm,
         topMargin=2.5*cm, bottomMargin=2.5*cm,
-        title=title_text, author="RAG Study System",
+        title=title_text, author="Local PDF Study",
     )
 
     styles = _build_pdf_styles(getSampleStyleSheet())
@@ -477,7 +477,7 @@ BANNER = r"""
 |  _ <  / ___ \ |_| |  ___) | |_| |_| | (_| | |_| |
 |_| \_\/_/   \_\____| |____/ \__|\__,_|\__,_|\__, |
                                               |___/
-         Local RAG -- LangChain + Ollama + ChromaDB
+   Local PDF Study -- LangChain + Ollama + ChromaDB
 """
 
 
@@ -516,7 +516,7 @@ def main_menu(chain: RetrievalQA, lang: str = "en") -> None:
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    print("\n  Starting RAG Study System ...")
+    print("\n  Starting Local PDF Study ...")
 
     # Load or build the vector store
     try:

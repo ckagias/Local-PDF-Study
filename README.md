@@ -1,4 +1,4 @@
-# RAG Study System
+# Local PDF Study Companion
 
 A fully local AI study assistant that reads your PDF files and lets you generate study guides, quizzes, and ask questions without sending anything to the cloud.
 
@@ -28,8 +28,8 @@ Built with **LangChain**, **Ollama**, and **ChromaDB**.
 **1. Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/Retrieval-Augmented-Generation.git
-cd RAG
+git clone https://github.com/your-username/local-pdf-study.git
+cd local-pdf-study
 ```
 
 **2. Install Python dependencies**
@@ -56,7 +56,7 @@ ollama pull nomic-embed-text
 Create a folder called `my_exam_files` in the project directory and place your PDF files inside it.
 
 ```
-RAG/
+local-pdf-study/
 ├── rag.py
 └── my_exam_files/
     ├── lecture1.pdf
@@ -114,7 +114,7 @@ On macOS or Windows, Arial is typically already present and will be detected aut
 ## Project Structure
 
 ```
-RAG/
+local-pdf-study/
 ├── rag.py              # main script
 ├── my_exam_files/      # your input PDFs (created by you)
 ├── study_db/           # auto-generated ChromaDB vector store
